@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoTracker | Track Your Favourite Coins </title>
+    <link rel="stylesheet" href="cryptostyle.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+     <header>
+        <nav>
+            <ul>
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="user-buttons">
+            <button id="sign-up">Sign Up</button>
+            <button id="log-in">Log In</button>
+        </div>
+     </header>
+
+     <!-- MAIN -->
+      <main>
+        <div class="main-header">
+            <h1>Crypto Prices</h1>
+            <form>
+                <input type="text" id="searchInput" placeholder="Search...">
+                <!-- <button id="search-button">Search</button> -->
+            </form>
+        </div>
+
+        <div class="crypto-container">
+            <table id="cryptoTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Coin</th>
+                        <th>Price (USD)</th>
+                        <th>Market Cap</th>
+                    <!-- </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Bitcoin</td>
+                        <td>$2489473</td>
+                        <td>$900000000</td>
+                        <td>-3.41%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Etherium</td>
+                        <td>$772628</td>
+                        <td>$67282993</td>
+                        <td>1.25%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Etherium</td>
+                        <td>$772628</td>
+                        <td>$67282993</td>
+                        <td>1.25%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Etherium</td>
+                        <td>$772628</td>
+                        <td>$67282993</td>
+                        <td>1.25%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Etherium</td>
+                        <td>$772628</td>
+                        <td>$67282993</td>
+                        <td>1.25%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Etherium</td>
+                        <td>$772628</td>
+                        <td>$67282993</td>
+                        <td>1.25%</td>
+                    </tr> -->
+                </thead>
+                <tbody id="cryptoList"></tbody>
+            </table>
+        </div>
+
+        <button id="load-more">Load More</button>
+
+      </main>
+
+       <!-- FOOTER -->
+       <footer>
+        <div class="social-links">
+            <a href="#instagram">
+                <img src="/Images/instagram-icon.png" alt="Instagram" class="social-icon">Instagram
+            </a>
+            <a href="https://www.linkedin.com/in/suyogshresthaa/">
+                <img src="/Images/linkedin-icon.png" alt="LinkedIn" class="social-icon">LinkedIn
+            </a>
+            <a href="https://github.com/suyogshresthaa">
+                <img src="/Images/github-icon.png" alt="Github" class="social-icon">Github
+            </a>
+        </div>
+        <p>&copy; 2024 CryptoTracker. All Rights Reserved.</p>
+     </footer>
+
+     <script src="crypto.js"></script>
+
+</body>
+</html>
