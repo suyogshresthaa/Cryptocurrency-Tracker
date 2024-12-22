@@ -7,6 +7,7 @@ const cryptoListEl = document.getElementById('cryptoList');
 const searchInputEL = document.getElementById('searchInput');
 const searchButtonEl = document.getElementById('search-button');
 const loadMoreButtonEL = document.getElementById('load-more');
+const paragraphEl = document.getElementById("update");
 
 
 let cryptocurrencies = [];
@@ -14,14 +15,23 @@ let displayedCryptos = 10;
 
 // Fetch cryptocurrency data
 async function fetchCryptoData(){
-    const url = `${BASE_URL}/assets?apikey=${API_KEY}`;
-    const response = await fetch(url);
+    try {
+        loadMoreButtonEL.disabled = true;
 
-    const data = await response.json();
+        const url = `${BASE_URL}/assets?apikey=${API_KEY}`;
+        const response = await fetch(url);
+
+        const data = await response.json();
+
+        paragraphEl.innerText = "";
+        loadMoreButtonEL.disabled = false;
     
-    //Filter cryptocurrency and sort according to market cap
-    cryptocurrencies = data.filter(asset => asset.type_is_crypto === 1).sort((a, b) => (b.volume_1day_usd || 0) - (a.volume_1day_usd || 0));
-    displayCryptos();
+        //Filter cryptocurrency and sort according to market cap
+        cryptocurrencies = data.filter(asset => asset.type_is_crypto === 1).sort((a, b) => (b.volume_1day_usd || 0) - (a.volume_1day_usd || 0));
+        displayCryptos();
+    } catch (error) {
+        paragraphEl.innerText = "An error has occured. Please try again later."
+    }
 }
 
 // Display cryptocurrency data

@@ -80,6 +80,11 @@ main{
     margin-bottom: 20px;
 }
 
+#update{
+    font-size: 20px;
+    text-align: center;
+}
+
 form{
     display: flex;
     gap: 10px;
